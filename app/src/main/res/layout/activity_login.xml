@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/lockImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200sp"/>
+
+    <TextView
+        android:id="@+id/signInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signText"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#0A806A"
+        android:textAlignment="center"
+        android:layout_marginTop="40sp"
+        android:layout_marginStart="60sp"
+        android:layout_marginEnd="60sp"
+        android:layout_marginBottom="40sp"
+        android:layout_below="@+id/lockImage"/>
+
+    <TextView
+        android:id="@+id/naturoCareText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/naturocare"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="#34EFC8"
+        android:layout_marginTop="70sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageButton
+        android:id="@+id/SignInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sign_in"
+        android:layout_below="@+id/signInText"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/login_button" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/left_leaf" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/right_leaf" />
+
+</RelativeLayout>

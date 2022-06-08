@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "133078608590",
+    "project_id": "naturocare-181f5",
+    "storage_bucket": "naturocare-181f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133078608590:android:1c91f7c0e096a28420fe9f",
+        "android_client_info": {
+          "package_name": "com.natrocare.naturocare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133078608590-5kson6vm5nbo5n95d7le7nj71gkoauk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7kLckUfB1me1FFlXkAzB787nMvoh6meM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133078608590-5kson6vm5nbo5n95d7le7nj71gkoauk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

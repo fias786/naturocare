@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NaturoCare</string>
+    <string name="shortIntro">Revoltionizing the plantcare technology</string>
+    <string name="naturocare">NaturoCare</string>
+    <string name="signText">Sign-in to Proceed into your Naturo world</string>
+    <string name="login_button">Login Button</string>
+    <string name="welcomeText">We help you grow your urban jungle with ease</string>
+    <string name="home">Home</string>
+    <string name="dashboard">DashBoard</string>
+    <string name="notification">Notifications</string>
+    <string name="settings">Settings</string>
+    <string name="chatbox">ChatBox</string>
+</resources>
