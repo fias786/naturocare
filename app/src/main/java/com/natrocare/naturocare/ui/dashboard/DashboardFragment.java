@@ -43,7 +43,7 @@ public class DashboardFragment extends Fragment implements LocationListener {
 
     private DashboardViewModel mViewModel;
     public double longitude=22.4,latitude=88.5;
-    private final String apiKey = "594e5e5431f6e37f7c4f7be9a08f8e16";
+    private final String apiKey = "01fb157f0e6205006f5e96815b19c85c";
 
     TextView windValue,temperature,feelsLikeValue,humidityValue,locationName,sunrise,sunset,motorValue;
     ImageView windArrow;
@@ -62,6 +62,52 @@ public class DashboardFragment extends Fragment implements LocationListener {
         sunset = root.findViewById(R.id.DayNightSunsetTime);
         motorValue = root.findViewById(R.id.MotorValue);
 
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .baseUrl("https://api.openweathermap.org/data/2.5/")
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//
+//        CurrentWeatherApi currentWeatherApi = retrofit.create(CurrentWeatherApi.class);
+//
+//        Call<CurrentWeatherResponse> currentWeather = currentWeatherApi.getCurrentWeather(latitude,longitude,apiKey,"metric");
+//
+//        currentWeather.enqueue(new Callback<CurrentWeatherResponse>() {
+//            @SuppressLint("SetTextI18n")
+//            @Override
+//            public void onResponse(Call<CurrentWeatherResponse> call, Response<CurrentWeatherResponse> response) {
+//                if(response.isSuccessful()){
+//                    Log.d("ResponseBody", ""+response.body().getMain().getTemp());
+//                    if(!TextUtils.isEmpty(response.body().getName())){
+//                        locationName.setText(response.body().getName());
+//                    }
+//                    List<WeatherItem> weatherItems = response.body().getWeather();
+//                    for (WeatherItem weatherItem : weatherItems){
+//                        temperature.setText(String.format(Locale.getDefault(), "%.0f°",response.body().getMain().getTemp()+30)+" | "+weatherItem.getMain());
+//                    }
+//                    windValue.setText(""+response.body().getWind().getSpeed());
+//                    windArrow.setRotation(Float.parseFloat(""+(105+response.body().getWind().getDeg())%360));
+//                    feelsLikeValue.setText(String.format(Locale.getDefault(), "%.0f°",response.body().getMain().getFeelsLike()+30));
+//                    humidityValue.setText(String.format(Locale.getDefault(), "%d%%",response.body().getMain().getHumidity()));
+//                    Date date1 = new Date(response.body().getSys().getSunrise());
+//                    Date date2 = new Date(response.body().getSys().getSunset());
+//                    sunrise.setText(String.format("%02d:%02d",date1.getHours(),date1.getMinutes()));
+//                    sunset.setText(String.format("Sunset : %02d:%02d PM",date2.getHours(),date2.getMinutes()));
+//                }else{
+//                    Log.d("ResponseBody","Response Failed");
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<CurrentWeatherResponse> call, Throwable t) {
+//                t.printStackTrace();
+//            }
+//        });
+
+        return root;
+    }
+
+    @Override
+    public void onStart() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.openweathermap.org/data/2.5/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -91,7 +137,7 @@ public class DashboardFragment extends Fragment implements LocationListener {
                     Date date1 = new Date(response.body().getSys().getSunrise());
                     Date date2 = new Date(response.body().getSys().getSunset());
                     sunrise.setText(String.format("%02d:%02d",date1.getHours(),date1.getMinutes()));
-                    sunset.setText(String.format("%02d:%02d",date2.getHours(),date2.getMinutes()));
+                    sunset.setText(String.format("Sunset : %02d:%02d PM",date2.getHours(),date2.getMinutes()));
                 }else{
                     Log.d("ResponseBody","Response Failed");
                 }
@@ -103,9 +149,8 @@ public class DashboardFragment extends Fragment implements LocationListener {
             }
         });
 
-        return root;
+        super.onStart();
     }
-
 
     @Override
     public void onLocationChanged(@NonNull Location location) {

@@ -217,7 +217,7 @@
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
-                <com.github.mikephil.charting.charts.LineChart
+                <com.anychart.AnyChartView
                     android:id="@+id/MoistureLineChart"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -280,7 +280,7 @@
                     android:contentDescription="Recycle" />
 
                 <TextView
-                    android:id="@+id/TemperatureValue"
+                    android:id="@+id/MoistureValue"
                     android:layout_below="@id/RainCloudImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -294,7 +294,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/TemperatureValue"
+                    android:layout_toEndOf="@id/MoistureValue"
                     android:layout_centerInParent="true"
                     android:text="%\nMoisture"
                     android:textSize="11sp"
@@ -303,7 +303,7 @@
 
                 <TextView
                     android:id="@+id/HomeSunsetTime"
-                    android:layout_below="@+id/TemperatureValue"
+                    android:layout_below="@+id/MoistureValue"
                     android:layout_width="145dp"
                     android:layout_height="wrap_content"
                     android:textColor="#17365A"

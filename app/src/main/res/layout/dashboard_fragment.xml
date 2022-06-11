@@ -237,7 +237,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:src="@drawable/windarrow"
-                    android:rotation=""
+                    android:rotation="0"
                     />
 
                 <TextView
