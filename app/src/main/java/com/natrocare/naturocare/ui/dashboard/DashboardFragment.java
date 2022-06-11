@@ -43,7 +43,7 @@ public class DashboardFragment extends Fragment implements LocationListener {
 
     private DashboardViewModel mViewModel;
     public double longitude=22.4,latitude=88.5;
-    private final String apiKey = "01fb157f0e6205006f5e96815b19c85c";
+    private final String apiKey = "<API-KEY>";
 
     TextView windValue,temperature,feelsLikeValue,humidityValue,locationName,sunrise,sunset,motorValue;
     ImageView windArrow;
